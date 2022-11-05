@@ -1,27 +1,27 @@
 public class Main {
     public static void main(String[] args) {
 
-        int wymiar = 3;
-        char[][] plansza = {{'O', 'X', 'X'},
+        int dimension = 3;
+        char[][] board = {{'O', 'X', 'X'},
                 {'O', 'X', ' '},
                 {' ', 'O', 'O'}};
-        Main.drukujplansze(plansza);
+        Main.printplans(board);
         }
 
 
-    public static void drukujplansze(char[][] plansza) {
-        int wymiar = plansza.length;
+    public static void printplans(char[][] board) {
+        int dimension = board.length;
 
         System.out.print("\t");
 
-        for (int i = 0; i < wymiar; i++) {
+        for (int i = 0; i < dimension; i++) {
             System.out.print(i + "\t");
         }
         System.out.println();
-        for (int wiersz = 0; wiersz < plansza.length; wiersz++) {
-            System.out.print(wiersz + ":\t");
-            for (int kolumna = 0; kolumna < plansza[wiersz].length; kolumna++) {
-                System.out.print(plansza[wiersz][kolumna] + "\t");
+        for (int row = 0; row < board.length; row++) {
+            System.out.print(row + ":\t");
+            for (int column = 0; column < board[row].length; column++) {
+                System.out.print(board[row][column] + "\t");
             }
             System.out.println();
         }
